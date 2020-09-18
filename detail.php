@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mine.css">
     <title>Banjar</title>
   </head>
   <body>
@@ -17,26 +17,22 @@
   <a class="navbar-brand" href="#">
     <img src="img/logo.png" width="70" height="40" class="d-inline-block align-top" alt="" loading="lazy">
   </a>
-  <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="index.php">Beranda</a>
+        <a class="nav-link" href="index.php">Beranda<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="wisata.php">Destinasi Wisata</a>
+        <a class="nav-link active" href="wisata.php">Destinasi Wisata<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item"> 
         <a class="nav-link" href="makan.php">Tempat Makan</a>
       </li>
-      <li class="nav-item active"> 
-        <a class="nav-link" href="penginapan.php">Penginapan <span class="sr-only">(current)</span></a>
+      <li class="nav-item"> 
+        <a class="nav-link" href="penginapan.php">Penginapan</a>
       </li>
       <li class="nav-item"> 
         <a class="nav-link" href="index.php#info">About</a>
@@ -47,13 +43,30 @@
 <!-- End Navbar -->
 
 <!-- Content -->
-<div class="container-xl" id="content">
+<h3 class="text-center">Nama Tempat</h3>
+<div class="container mb-10 mt-5">
+    <div class="card" style="width: auto;">
+        <div class="row no-gutters bg-dark">
+            <div class="col-md-6">
+                <img src="img/MenaraPandang.jpg" class="card-img" alt="...">
+            </div>
+            <div class="col-md-6">
+                <div class="card-body text-justify text-light">
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <div class="container-xl mt-5" id="content">
     <div class="row">
       <div class="col-lg-5">
         <hr class="my-4">
       </div>
       <div class="col-lg-2">
-        <p class="text-center font-weight-bold">Penginapan</p>
+        <p class="text-center font-weight-bold">Lainnya</p>
       </div>
       <div class="col-lg-5">
         <hr class="my-4">
@@ -61,63 +74,63 @@
     </div>
 
     <div class="row">
-      <div class="col-lg-4">
+      <div class="col-lg-3">
         <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
         <div class="caption text-center">
           <p>kakakaka</p>
         </div>
       </div>
 
-      <div class="col-lg-4">
+      <div class="col-lg-3">
         <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
         <div class="caption text-center">
           <p>kakakaka</p>
         </div>
       </div>
 
-      <div class="col-lg-4">
+      <div class="col-lg-3">
         <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
         <div class="caption text-center">
           <p>kakakaka</p>
         </div>
       </div>
     
-      <div class="col-lg-4">
+      <div class="col-lg-3">
         <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
         <div class="caption text-center">
           <p>kakakaka</p>
         </div>
       </div>
 
-      <div class="col-lg-4">
+      <div class="col-lg-3">
         <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
         <div class="caption text-center">
           <p>kakakaka</p>
         </div>
       </div>
 
-      <div class="col-lg-4">
+      <div class="col-lg-3">
         <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
         <div class="caption text-center">
           <p>kakakaka</p>
         </div>
       </div>
 
-      <div class="col-lg-4">
+      <div class="col-lg-3">
         <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
         <div class="caption text-center">
           <p>kakakaka</p>
         </div>
       </div>
 
-      <div class="col-lg-4">
+      <div class="col-lg-3">
         <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
         <div class="caption text-center">
           <p>kakakaka</p>
         </div>
       </div>
 
-      <div class="col-lg-4">
+      <div class="col-lg-3">
         <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
         <div class="caption text-center">
           <p>kakakaka</p>

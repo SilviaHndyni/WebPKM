@@ -13,20 +13,24 @@
   <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top mb-5">
   <a class="navbar-brand" href="#">
     <img src="img/logo.png" width="70" height="40" class="d-inline-block align-top" alt="" loading="lazy">
   </a>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse">
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="home.php">Beranda <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.php">Beranda<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="wisata.php">Destinasi Wisata <span class="sr-only">(current)</span></a>
+        <a class="nav-link active" href="wisata.php">Destinasi Wisata<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item"> 
         <a class="nav-link" href="makan.php">Tempat Makan</a>
@@ -35,7 +39,7 @@
         <a class="nav-link" href="penginapan.php">Penginapan</a>
       </li>
       <li class="nav-item"> 
-        <a class="nav-link" href="home.php#info">About</a>
+        <a class="nav-link" href="index.php#info">About</a>
       </li>
     </ul>
   </div>
@@ -45,20 +49,20 @@
 <!-- Content -->
   <div class="container-xl" id="content">
     <div class="row">
-      <div class="col-lg-3">
+      <div class="col-lg-5">
         <hr class="my-4">
       </div>
-      <div class="col-lg-6">
-        <p class="text-center font-weight-bold">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem sunt nisi voluptates facere enim quo? Sed saepe inventore sequi aliquid optio. Corrupti aspernatur totam ratione. Magnam animi facere illo magni!</p>
+      <div class="col-lg-2">
+        <p class="text-center font-weight-bold">Wisata</p>
       </div>
-      <div class="col-lg-3">
+      <div class="col-lg-5">
         <hr class="my-4">
       </div>
     </div>
 
     <div class="row">
       <div class="col-lg-4">
-        <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
+        <a href="detail.php"><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
         <div class="caption text-center">
           <p>kakakaka</p>
         </div>

@@ -7,23 +7,23 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Banjar</title>
   </head>
   <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   <a class="navbar-brand" href="#">
     <img src="img/logo.png" width="70" height="40" class="d-inline-block align-top" alt="" loading="lazy">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse">
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="home.php">Beranda <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.php">Beranda <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="wisata.php">Destinasi Wisata</a>
@@ -44,46 +44,63 @@
 
   <div class="jumbotron mb-5">
     <h1 class="display-4"><span class="font-weight-bold">Hello, world!</span></h1>
-    <hr class="my-4">
     <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
     <a class="btn btn-primary btn-lg" href="#content" role="button">Go</a>
   </div>
 
 <!-- Content -->
   <div class="container-fluid" id="content">
-    <p class="text-center font-weight-bold">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem sunt nisi voluptates facere enim quo? Sed saepe inventore sequi aliquid optio. Corrupti aspernatur totam ratione. Magnam animi facere illo magni!</p>
-    <hr class="my-4">
-    <div class="row">
-      <div class="col-lg-4">
-        <a href="wisata.php"><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
-      </div>
-
-      <div class="col-lg-4">
-        <a href="makan.php"><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
-      </div>
-
-      <div class="col-lg-4">
-        <a href="penginapan.php"><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
+    <h1 class="text-center">Ada Apa di Banjarmasin?</h1>
+    <hr class="">
+    <div class="row row-cols-lg-3 row-cols-md-1 row-cols-sm-1">
+  <div class="col mb-4">
+    <div class="card h-100 text-center">
+      <img src="img/MenaraPandang.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
     </div>
   </div>
-
-  <div class="container-fluid mt-5 bg-dark" id="info">
-    <div class="row">
-      <div class="col-lg-6">
-        <img src="img/MenaraPandang.jpg" class="foto" alt="">
-      </div>
-
-      <div class="col-lg-6 p-5">
-      <h1 class="text-center mb-5 text-light"><span class="font-weight-bold">Apa itu Banjarmasin?</span></h1>
-        <p class="text-center font-weight-bold text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dolorem placeat nihil vero nam, optio dignissimos iste nobis adipisci omnis ipsum deserunt, cupiditate magnam alias blanditiis? Molestias autem tenetur numquam!</p>
+  <div class="col mb-4">
+    <div class="card h-100 text-center">
+      <img src="img/MenaraPandang.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
     </div>
   </div>
+  <div class="col mb-4">
+    <div class="card h-100 text-center">
+      <img src="img/MenaraPandang.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+  <div class="card mt-3" style="width: auto;">
+  <div class="row no-gutters bg-dark">
+    <div class="col-md-6">
+      <img src="img/MenaraPandang.jpg" class="card-img" alt="...">
+    </div>
+    <div class="col-md-6">
+      <div class="card-body text-center text-light">
+        <h5 class="card-title"><span class="font-weight-bold">Apa itu Banjarmasin?</span></h5><hr class="">
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- End Content -->
 
 <!-- Footer -->
-  <footer class="page-footer font-small bg-dark mt-5">
+  <footer class="page-footer font-small bg-dark mt-4">
 
   <!-- Copyright -->
   <div class="footer-copyright text-center text-light py-3">
