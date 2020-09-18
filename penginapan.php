@@ -27,7 +27,7 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="index.php">Beranda</a>
+        <a class="nav-link" href="index.html">Beranda</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="wisata.php">Destinasi Wisata</a>
@@ -39,7 +39,7 @@
         <a class="nav-link" href="penginapan.php">Penginapan <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item"> 
-        <a class="nav-link" href="index.php#info">About</a>
+        <a class="nav-link" href="index.html#info">About</a>
       </li>
     </ul>
   </div>
