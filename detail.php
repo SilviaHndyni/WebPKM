@@ -5,9 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Libre+Baskerville&family=Marck+Script&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/mine.css">
+    <link rel="stylesheet" href="css/stylee.css">
     <title>Banjar</title>
   </head>
   <body>
@@ -26,10 +27,10 @@
         <a class="nav-link" href="index.html">Beranda<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="wisata.php">Destinasi Wisata<span class="sr-only">(current)</span></a>
+        <a class="nav-link active" href="wisata.php">Wisata<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item"> 
-        <a class="nav-link" href="makan.php">Tempat Makan</a>
+        <a class="nav-link" href="makan.php">Kuliner</a>
       </li>
       <li class="nav-item"> 
         <a class="nav-link" href="penginapan.php">Penginapan</a>
@@ -43,7 +44,7 @@
 <!-- End Navbar -->
 
 <!-- Content -->
-<h3 class="text-center">Nama Tempat</h3>
+<h3 class="text-center judul">Nama Tempat</h3>
 <div class="container mb-10 mt-5">
     <div class="card" style="width: auto;">
         <div class="row no-gutters bg-dark">
@@ -66,7 +67,7 @@
         <hr class="my-4">
       </div>
       <div class="col-lg-2">
-        <p class="text-center font-weight-bold">Lainnya</p>
+        <p class="text-center font-weight-bold judul text-muted font-italic">Lainnya</p>
       </div>
       <div class="col-lg-5">
         <hr class="my-4">
@@ -74,82 +75,56 @@
     </div>
 
     <div class="row">
-      <div class="col-lg-3">
+      <div class="col-lg-3 col-md-3 col-sm-4 mb-5">
         <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
-        <div class="caption text-center">
+        <div class="caption-small text-center">
           <p>kakakaka</p>
+          <span style="font-family: 'Marck Script', cursive; margin-top: -15px;">Kunjungi</span>
         </div>
       </div>
 
-      <div class="col-lg-3">
+      <div class="col-lg-3 col-md-3 col-sm-4">
         <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
-        <div class="caption text-center">
+        <div class="caption-small text-center">
           <p>kakakaka</p>
+          <span style="font-family: 'Marck Script', cursive; margin-top: -15px;">Kunjungi</span>
         </div>
       </div>
 
-      <div class="col-lg-3">
+      <div class="col-lg-3 col-md-3 col-sm-4">
         <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
-        <div class="caption text-center">
+        <div class="caption-small text-center">
           <p>kakakaka</p>
+          <span style="font-family: 'Marck Script', cursive; margin-top: -15px;">Kunjungi</span>
         </div>
       </div>
     
-      <div class="col-lg-3">
+      <div class="col-lg-3 col-md-3 col-sm-4">
         <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
-        <div class="caption text-center">
+        <div class="caption-small text-center">
           <p>kakakaka</p>
+          <span style="font-family: 'Marck Script', cursive; margin-top: -15px;">Kunjungi</span>
         </div>
       </div>
 
-      <div class="col-lg-3">
+      <div class="col-lg-3 col-md-3 col-sm-4">
         <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
-        <div class="caption text-center">
+        <div class="caption-small text-center">
           <p>kakakaka</p>
         </div>
       </div>
-
-      <div class="col-lg-3">
-        <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
-        <div class="caption text-center">
-          <p>kakakaka</p>
-        </div>
-      </div>
-
-      <div class="col-lg-3">
-        <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
-        <div class="caption text-center">
-          <p>kakakaka</p>
-        </div>
-      </div>
-
-      <div class="col-lg-3">
-        <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
-        <div class="caption text-center">
-          <p>kakakaka</p>
-        </div>
-      </div>
-
-      <div class="col-lg-3">
-        <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
-        <div class="caption text-center">
-          <p>kakakaka</p>
-        </div>
-      </div>
-      </div>
+    </div>
   </div>
 
 <!-- End Content -->
 
 <!-- Footer -->
-  <footer class="page-footer font-small bg-dark mt-5">
-
+<footer class="page-footer font-small bg-dark mt-4">
   <!-- Copyright -->
   <div class="footer-copyright text-center text-light py-2">
-    © 2020 Copyright: Silvia
+    <small>© 2020 Copyright: Silvia</small>
   </div>
   <!-- Copyright -->
-
 </footer>
 <!-- End Footer -->
 

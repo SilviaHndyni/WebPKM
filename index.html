@@ -5,9 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Libre+Baskerville:ital@1&family=Marck+Script&display=swap" rel="stylesheet">    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stylee.css">
     <title>Banjar</title>
   </head>
   <body>
@@ -26,10 +27,10 @@
         <a class="nav-link" href="index.html">Beranda <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="wisata.php">Destinasi Wisata</a>
+        <a class="nav-link" href="wisata.php">Wisata</a>
       </li>
       <li class="nav-item"> 
-        <a class="nav-link" href="makan.php">Tempat Makan</a>
+        <a class="nav-link" href="makan.php">Kuliner</a>
       </li>
       <li class="nav-item"> 
         <a class="nav-link" href="penginapan.php">Penginapan</a>
@@ -43,22 +44,22 @@
 <!-- End Navbar -->
 
   <div class="jumbotron mb-5">
-    <h1 class="display-4"><span class="font-weight-bold">Hello, world!</span></h1>
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <a class="btn btn-primary btn-lg" href="#content" role="button">Go</a>
+    <h1 style="font-family: 'Libre Baskerville', serif;">SELAMAT DATANG DI<br><span class="font-weight-bold">BANJARMASIN!</span></h1>
+    <p style="font-family: 'Marck Script', cursive;">It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <a class="btn btn-primary btn-lg px-3" href="#content" role="button">Go</a>
   </div>
 
 <!-- Content -->
   <div class="container-fluid" id="content">
-    <h1 class="text-center">Ada Apa di Banjarmasin?</h1>
+    <h1 class="text-center" style="font-family: 'Libre Baskerville', serif;">Ada Apa di Banjarmasin?</h1>
     <hr class="">
-    <div class="row row-cols-lg-3 row-cols-md-1 row-cols-sm-1">
+    <div class="row row-cols-1 row-cols-md-3">
   <div class="col mb-4">
     <div class="card h-100 text-center">
       <img src="img/MenaraPandang.jpg" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <a href="wisata.php" class="btn btn-primary" href="#" role="button">Kunjungi</a>
       </div>
     </div>
   </div>
@@ -66,8 +67,8 @@
     <div class="card h-100 text-center">
       <img src="img/MenaraPandang.jpg" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <a href="makan.php" class="btn btn-primary" href="#" role="button">Kunjungi</a>
       </div>
     </div>
   </div>
@@ -75,22 +76,22 @@
     <div class="card h-100 text-center">
       <img src="img/MenaraPandang.jpg" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <a href="penginapan.php" class="btn btn-primary" href="#" role="button">Kunjungi</a>
       </div>
     </div>
   </div>
 </div>
 </div>
 
-  <div class="card mt-3" style="width: auto;">
+  <div class="card mt-3" style="width: auto;" id="info">
   <div class="row no-gutters bg-dark">
     <div class="col-md-6">
       <img src="img/MenaraPandang.jpg" class="card-img" alt="...">
     </div>
     <div class="col-md-6">
-      <div class="card-body text-center text-light">
-        <h5 class="card-title"><span class="font-weight-bold">Apa itu Banjarmasin?</span></h5><hr class="">
+      <div class="card-body text-center text-light p-5">
+        <h5 class="card-title"><span class="font-weight-bold" style="font-family: 'Libre Baskerville', serif;">Apa itu Banjarmasin?</span></h5><hr class="">
         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
       </div>
@@ -101,13 +102,11 @@
 
 <!-- Footer -->
   <footer class="page-footer font-small bg-dark mt-4">
-
   <!-- Copyright -->
-  <div class="footer-copyright text-center text-light py-3">
-    © 2020 Copyright: Silvia
+  <div class="footer-copyright text-center text-light py-2">
+    <small>© 2020 Copyright: Silvia</small>
   </div>
   <!-- Copyright -->
-
 </footer>
 <!-- End Footer -->
 
