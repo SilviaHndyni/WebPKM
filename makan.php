@@ -1,3 +1,10 @@
+<?php
+require_once("koneksi.php");
+$stmt = $pdo_conn->prepare("SELECT * FROM warung ORDER BY id DESC");
+$stmt->execute();
+$result = $stmt->fetchAll();
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Libre+Baskerville&family=Marck+Script&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/stylee.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Banjar</title>
   </head>
   <body>
@@ -61,38 +68,33 @@
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-lg-4 mb-5">
-        <a href="detail.php"><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
-        <div class="caption text-center">
-          <p>kakakaka</p>
-          <span style="font-family: 'Marck Script', cursive; margin-top: -15px;">Kunjungi</span>
+    <div class="row row-cols-1 row-cols-md-3 mt-3">
+      <?php
+        if(!empty($result)) { 
+          foreach($result as $row) {
+      ?>
+        <div class="col mb-5">
+          <div class="card h-100 text-center bg-transparent border-0">
+            <div style="height: 240px">
+              <?php echo "<a href='images/$row[gambar]' class='image'>";
+                echo "<img src='images/$row[gambar]' class='foto' alt=''/>";?>
+              </a>
+            </div>
+            
+            <div class="card-body caption text-center">
+              <p class="card-text"><?php echo $row["nama"]; ?></p>
+              <a href="detail.php">
+                <span style="font-family: 'Marck Script', cursive; margin-top: -15px;">Kunjungi</span>
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div class="col-lg-4">
-        <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
-        <div class="caption text-center">
-          <p>kakakaka</p>
-        </div>
-      </div>
-
-      <div class="col-lg-4">
-        <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
-        <div class="caption text-center">
-          <p>kakakaka</p>
-        </div>
-      </div>
-    
-      <div class="col-lg-4">
-        <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
-        <div class="caption text-center">
-          <p>kakakaka</p>
-        </div>
-      </div>
+        <?php
+          }
+          }
+        ?>
     </div>
   </div>
-
 <!-- End Content -->
 
 <!-- Footer -->
