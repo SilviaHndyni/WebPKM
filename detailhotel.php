@@ -1,8 +1,13 @@
 <?php
-require_once("koneksi.php");
-$stmt = $pdo_conn->prepare("SELECT * FROM destinasi ORDER BY id DESC");
+require_once "koneksi.php";
+$select_stmt=$pdo_conn->prepare("select * from hotel where id=". @($_GET['display_id']));
+$select_stmt->execute();
+$result = $select_stmt->fetchAll();
+
+$stmt = $pdo_conn->prepare("SELECT * FROM hotel ORDER BY id DESC");
 $stmt->execute();
-$result = $stmt->fetchAll();
+$results = $stmt->fetchAll();
+
 ?>
 
 <!doctype html>
@@ -15,7 +20,7 @@ $result = $stmt->fetchAll();
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Libre+Baskerville&family=Marck+Script&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stylee.css">
     <title>Banjar</title>
   </head>
   <body>
@@ -25,10 +30,6 @@ $result = $stmt->fetchAll();
   <a class="navbar-brand" href="#">
     <img src="img/logo.png" width="70" height="40" class="d-inline-block align-top" alt="" loading="lazy">
   </a>
-  <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -55,44 +56,63 @@ $result = $stmt->fetchAll();
 <!-- End Navbar -->
 
 <!-- Content -->
-  <div class="container-xl" id="content">
+<?php
+  if(!empty($result)) { ?>
+    <h3 class="text-center judul"><?php echo $result[0]["nama"];?></h3>
+    <div class="container mb-10 mt-5">
+        <div class="card" style="width: auto;">
+            <div class="row no-gutters bg-dark">
+                <div class="col-md-6">
+                    <a href="images/<?php echo $result[0]['gambar'];?>" class="image">
+                      <img src="images/<?php echo $result[0]['gambar'];?>" class="card-img">
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-body text-justify text-light">
+                        <p class="card-text"><?php echo $result[0]['Deskripsi'];?></p>
+                        <p class="card-text"><small>Alamat : <?php echo $result[0]['alamat'];?></small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  <?php } ?>
+
+  <div class="container-xl mt-5" id="content">
     <div class="row">
-      <div class="col-lg-4">
-        <hr>
+      <div class="col-lg-5">
+        <hr class="my-4">
       </div>
-      <div class="col-lg-4">
-        <p class="text-center font-weight-bold font-italic judul">WISATA</p>
+      <div class="col-lg-2">
+        <p class="text-center font-weight-bold judul text-muted font-italic">Lainnya</p>
       </div>
-      <div class="col-lg-4">
-        <hr>
+      <div class="col-lg-5">
+        <hr class="my-4">
       </div>
     </div>
 
-    <div class="row row-cols-1 row-cols-md-3 mt-3">
-      <?php
-        if(!empty($result)) { 
-          foreach($result as $row) {
+    <div class="row">
+    <?php
+        if(!empty($results)) { 
+          foreach($results as $row) {
+            if($row["id"] != @($_GET['display_id'])) {
       ?>
-        <div class="col mb-5">
-          <div class="card h-100 text-center bg-transparent border-0">
-            <div style="height: 240px">
-              <?php echo "<a href='images/$row[gambar]' class='image'>";
-                echo "<img src='images/$row[gambar]' class='foto'/>";?>
-              </a>
-            </div>
-            
-            <div class="card-body caption text-center">
-              <p class="card-text"><?php echo $row["nama"]; ?></p>
-              <a href="detailwisata.php?display_id=<?php echo $row["id"];?>"; title="<?php echo $row["nama"];?>">
-                <span style="font-family: 'Marck Script', cursive; margin-top: -15px;">Kunjungi</span>
-              </a>
-            </div>
-          </div>
+      <div class="col-lg-3 col-md-3 col-sm-4 mb-5">
+        <?php echo "<a href='images/$row[gambar]' class='image'>";
+          echo "<img src='images/$row[gambar]' class='foto'/>";?>
+          </a>
+          <div class="caption-small text-center">
+          <p><?php echo $row["nama"]; ?></p>
+          <a href="detailhotel.php?display_id=<?php echo $row["id"];?>"; title="<?php echo $row["nama"];?>">
+            <span style="font-family: 'Marck Script', cursive; margin-top: -15px;">Kunjungi</span>
+          </a>
         </div>
-        <?php
+      </div>
+    <?php
+            }
           }
-          }
-        ?>
+        }
+    ?>
     </div>
   </div>
 <!-- End Content -->

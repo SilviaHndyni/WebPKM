@@ -1,3 +1,15 @@
+<?php
+require_once "koneksi.php";
+$select_stmt=$pdo_conn->prepare("select * from warung where id=". @($_GET['display_id']));
+$select_stmt->execute();
+$result = $select_stmt->fetchAll();
+
+$stmt = $pdo_conn->prepare("SELECT * FROM warung ORDER BY id DESC");
+$stmt->execute();
+$results = $stmt->fetchAll();
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -44,22 +56,27 @@
 <!-- End Navbar -->
 
 <!-- Content -->
-<h3 class="text-center judul">Nama Tempat</h3>
-<div class="container mb-10 mt-5">
-    <div class="card" style="width: auto;">
-        <div class="row no-gutters bg-dark">
-            <div class="col-md-6">
-                <img src="img/MenaraPandang.jpg" class="card-img" alt="...">
-            </div>
-            <div class="col-md-6">
-                <div class="card-body text-justify text-light">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+<?php
+  if(!empty($result)) { ?>
+    <h3 class="text-center judul"><?php echo $result[0]["nama"];?></h3>
+    <div class="container mb-10 mt-5">
+        <div class="card" style="width: auto;">
+            <div class="row no-gutters bg-dark">
+                <div class="col-md-6">
+                    <a href="images/<?php echo $result[0]['gambar'];?>" class="image">
+                      <img src="images/<?php echo $result[0]['gambar'];?>" class="card-img">
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-body text-justify text-light">
+                        <p class="card-text"><?php echo $result[0]['Deskripsi'];?></p>
+                        <p class="card-text"><small>Alamat : <?php echo $result[0]['alamat'];?></small></p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+  <?php } ?>
 
   <div class="container-xl mt-5" id="content">
     <div class="row">
@@ -75,47 +92,29 @@
     </div>
 
     <div class="row">
+    <?php
+        if(!empty($results)) { 
+          foreach($results as $row) {
+            if($row["id"] != @($_GET['display_id'])) {
+      ?>
       <div class="col-lg-3 col-md-3 col-sm-4 mb-5">
-        <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
-        <div class="caption-small text-center">
-          <p>kakakaka</p>
-          <span style="font-family: 'Marck Script', cursive; margin-top: -15px;">Kunjungi</span>
+        <?php echo "<a href='images/$row[gambar]' class='image'>";
+          echo "<img src='images/$row[gambar]' class='foto'/>";?>
+          </a>
+          <div class="caption-small text-center">
+          <p><?php echo $row["nama"]; ?></p>
+          <a href="detailmakan.php?display_id=<?php echo $row["id"];?>"; title="<?php echo $row["nama"];?>">
+            <span style="font-family: 'Marck Script', cursive; margin-top: -15px;">Kunjungi</span>
+          </a>
         </div>
       </div>
-
-      <div class="col-lg-3 col-md-3 col-sm-4">
-        <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
-        <div class="caption-small text-center">
-          <p>kakakaka</p>
-          <span style="font-family: 'Marck Script', cursive; margin-top: -15px;">Kunjungi</span>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-3 col-sm-4">
-        <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
-        <div class="caption-small text-center">
-          <p>kakakaka</p>
-          <span style="font-family: 'Marck Script', cursive; margin-top: -15px;">Kunjungi</span>
-        </div>
-      </div>
-    
-      <div class="col-lg-3 col-md-3 col-sm-4">
-        <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
-        <div class="caption-small text-center">
-          <p>kakakaka</p>
-          <span style="font-family: 'Marck Script', cursive; margin-top: -15px;">Kunjungi</span>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-3 col-sm-4">
-        <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
-        <div class="caption-small text-center">
-          <p>kakakaka</p>
-        </div>
-      </div>
+    <?php
+            }
+          }
+        }
+    ?>
     </div>
   </div>
-
 <!-- End Content -->
 
 <!-- Footer -->

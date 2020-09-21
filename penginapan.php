@@ -83,7 +83,7 @@ $result = $stmt->fetchAll();
             
             <div class="card-body caption text-center">
               <p class="card-text"><?php echo $row["nama"]; ?></p>
-              <a href="detail.php">
+              <a href="detailhotel.php?display_id=<?php echo $row["id"];?>"; title="<?php echo $row["nama"];?>">
                 <span style="font-family: 'Marck Script', cursive; margin-top: -15px;">Kunjungi</span>
               </a>
             </div>
