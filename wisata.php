@@ -25,10 +25,6 @@ $result = $stmt->fetchAll();
   <a class="navbar-brand" href="#">
     <img src="img/logo.png" width="70" height="40" class="d-inline-block align-top" alt="" loading="lazy">
   </a>
-  <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -84,7 +80,7 @@ $result = $stmt->fetchAll();
             <div class="card-body caption text-center">
               <p class="card-text"><?php echo $row["nama"]; ?></p>
               <a href="detailwisata.php?display_id=<?php echo $row["id"];?>"; title="<?php echo $row["nama"];?>">
-                <span style="font-family: 'Marck Script', cursive; margin-top: -15px;">Kunjungi</span>
+                <span style="font-family: 'Marck Script', cursive; margin-top: -15px;">Lihat</span>
               </a>
             </div>
           </div>
