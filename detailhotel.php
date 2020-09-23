@@ -81,6 +81,9 @@ $results = $stmt->fetchAll();
             </div>
         </div>
     </div>
+    <div class="container mt-2">
+      <?php echo $result[0]['link'];?>
+    </div>
   <?php } ?>
 
   <div class="container-xl mt-5" id="content">

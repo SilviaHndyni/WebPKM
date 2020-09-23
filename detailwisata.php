@@ -78,12 +78,13 @@ $results = $stmt->fetchAll();
                         <a href="" target="_blank" rel="noopener noreferrer" class="card-text" style="font-size:13px;">Klik disini untuk lihat di Google Maps</a>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div style="width:100%">
-        <?php echo $result[0]['link'];?>
+              </div>
         </div>
     </div>
+    <div class="container mt-2">
+      <?php echo $result[0]['link'];?>
+    </div>
+
   <?php } ?>
 
   <div class="container-xl mt-5" id="content">
