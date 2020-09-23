@@ -66,3 +66,7 @@ body {
     margin-top: 10px;
     margin-bottom: -1px;
 }
+
+iframe {
+    width: 100%;
+}

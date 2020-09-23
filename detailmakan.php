@@ -112,7 +112,7 @@ $results = $stmt->fetchAll();
             
             <div class="card-body caption text-center">
               <p class="card-text"><?php echo $row["nama"]; ?></p>
-              <a href="detailwisata.php?display_id=<?php echo $row["id"];?>"; title="<?php echo $row["nama"];?>">
+              <a href="detailmakan.php?display_id=<?php echo $row["id"];?>"; title="<?php echo $row["nama"];?>">
                 <span style="font-family: 'Marck Script', cursive; margin-top: -15px;">Lihat</span>
               </a>
             </div>

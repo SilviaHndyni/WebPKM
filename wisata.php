@@ -1,6 +1,6 @@
 <?php
 require_once("koneksi.php");
-$stmt = $pdo_conn->prepare("SELECT * FROM destinasi ORDER BY id DESC");
+$stmt = $pdo_conn->prepare("SELECT * FROM destinasi ORDER BY id ASC");
 $stmt->execute();
 $result = $stmt->fetchAll();
 ?>

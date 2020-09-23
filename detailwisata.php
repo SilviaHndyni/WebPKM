@@ -80,6 +80,9 @@ $results = $stmt->fetchAll();
                 </div>
             </div>
         </div>
+        <div style="width:100%">
+        <?php echo $result[0]['link'];?>
+        </div>
     </div>
   <?php } ?>
 
