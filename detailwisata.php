@@ -1,3 +1,15 @@
+<?php
+require_once "koneksi.php";
+$select_stmt=$pdo_conn->prepare("select * from destinasi where id=". @($_GET['display_id']));
+$select_stmt->execute();
+$result = $select_stmt->fetchAll();
+
+$stmt = $pdo_conn->prepare("SELECT * FROM destinasi ORDER BY id DESC");
+$stmt->execute();
+$results = $stmt->fetchAll();
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Libre+Baskerville&family=Marck+Script&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/stylee.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Banjar</title>
   </head>
   <body>
@@ -24,7 +36,7 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="index.html">Beranda<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.html">Beranda</a>
       </li>
       <li class="nav-item">
         <a class="nav-link active" href="wisata.php">Wisata<span class="sr-only">(current)</span></a>
@@ -44,22 +56,32 @@
 <!-- End Navbar -->
 
 <!-- Content -->
-<h3 class="text-center judul">Nama Tempat</h3>
-<div class="container mb-10 mt-5">
-    <div class="card" style="width: auto;">
-        <div class="row no-gutters bg-dark">
-            <div class="col-md-6">
-                <img src="img/MenaraPandang.jpg" class="card-img" alt="...">
-            </div>
-            <div class="col-md-6">
-                <div class="card-body text-justify text-light">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+<?php
+  if(!empty($result)) { ?>
+    <h3 class="text-center judul"><?php echo $result[0]["nama"];?></h3>
+    <div class="container mb-10 mt-5">
+        <div class="card" style="width: auto;">
+            <div class="row no-gutters bg-dark">
+                <div class="col-md-6">
+                    <a href="images/<?php echo $result[0]['gambar'];?>" class="image">
+                      <img src="images/<?php echo $result[0]['gambar'];?>" class="card-img">
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-body text-justify text-light">
+                        <p class="card-text"><?php echo $result[0]['deskripsi'];?></p>
+                        <p class="card-text"><small>Alamat : <?php echo $result[0]['alamat'];?></small></p>
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-geo-alt" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M12.166 8.94C12.696 7.867 13 6.862 13 6A5 5 0 0 0 3 6c0 .862.305 1.867.834 2.94.524 1.062 1.234 2.12 1.96 3.07A31.481 31.481 0 0 0 8 14.58l.208-.22a31.493 31.493 0 0 0 1.998-2.35c.726-.95 1.436-2.008 1.96-3.07zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                          <path fill-rule="evenodd" d="M8 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        </svg>
+                        <a href="" target="_blank" rel="noopener noreferrer" class="card-text" style="font-size:13px;">Klik disini untuk lihat di Google Maps</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+  <?php } ?>
 
   <div class="container-xl mt-5" id="content">
     <div class="row">
@@ -74,48 +96,35 @@
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-lg-3 col-md-3 col-sm-4 mb-5">
-        <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
-        <div class="caption-small text-center">
-          <p>kakakaka</p>
-          <span style="font-family: 'Marck Script', cursive; margin-top: -15px;">Kunjungi</span>
+    <div class="row row-cols-1 row-cols-md-4 mt-3">
+      <?php
+        if(!empty($results)) { 
+          foreach($results as $row) {
+            if($row["id"] != @($_GET['display_id'])) {
+      ?>
+        <div class="col mb-5">
+          <div class="card h-100 text-center bg-transparent border-0">
+            <div style="height: 190px">
+              <?php echo "<a href='images/$row[gambar]' class='image'>";
+                echo "<img src='images/$row[gambar]' class='foto'/>";?>
+              </a>
+            </div>
+            
+            <div class="card-body caption text-center">
+              <p class="card-text"><?php echo $row["nama"]; ?></p>
+              <a href="detailwisata.php?display_id=<?php echo $row["id"];?>"; title="<?php echo $row["nama"];?>">
+                <span style="font-family: 'Marck Script', cursive; margin-top: -15px;">Lihat</span>
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div class="col-lg-3 col-md-3 col-sm-4">
-        <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
-        <div class="caption-small text-center">
-          <p>kakakaka</p>
-          <span style="font-family: 'Marck Script', cursive; margin-top: -15px;">Kunjungi</span>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-3 col-sm-4">
-        <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
-        <div class="caption-small text-center">
-          <p>kakakaka</p>
-          <span style="font-family: 'Marck Script', cursive; margin-top: -15px;">Kunjungi</span>
-        </div>
-      </div>
-    
-      <div class="col-lg-3 col-md-3 col-sm-4">
-        <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
-        <div class="caption-small text-center">
-          <p>kakakaka</p>
-          <span style="font-family: 'Marck Script', cursive; margin-top: -15px;">Kunjungi</span>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-3 col-sm-4">
-        <a href=""><img src="img/MenaraPandang.jpg" class="foto" alt=""></a>
-        <div class="caption-small text-center">
-          <p>kakakaka</p>
-        </div>
-      </div>
+        <?php
+            }
+          }
+          }
+        ?>
     </div>
   </div>
-
 <!-- End Content -->
 
 <!-- Footer -->
