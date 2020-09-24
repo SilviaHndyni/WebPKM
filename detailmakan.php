@@ -69,7 +69,7 @@ $results = $stmt->fetchAll();
                 </div>
                 <div class="col-md-6">
                     <div class="card-body text-justify text-light">
-                        <p class="card-text"><?php echo $result[0]['Deskripsi'];?></p>
+                        <p class="card-text"><?php echo $result[0]['deskripsi'];?></p>
                         <p class="card-text"><small>Alamat : <?php echo $result[0]['alamat'];?></small></p>
                     </div>
                 </div>
@@ -129,7 +129,7 @@ $results = $stmt->fetchAll();
 <footer class="page-footer font-small bg-dark mt-4">
   <!-- Copyright -->
   <div class="footer-copyright text-center text-light py-2">
-    <small>© 2020 Copyright: Silvia</small>
+    <small>Copyright ©2021 Web Wisata - All Rights Reserved <br> Design by Gusti, Rezi and Silvia</small>
   </div>
   <!-- Copyright -->
 </footer>
