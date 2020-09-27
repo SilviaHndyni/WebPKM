@@ -1,0 +1,191 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+img {
+    width: 100%;
+}
+a:hover {
+    color: gray;
+    text-decoration: none;
+}
+h2 {
+    font-size: 130%;
+    color:red;
+}
+
+p {
+    font-size: 1rem;
+}
+h5 {
+    display: inline-block;
+}
+
+table {
+    width: 100%;
+}
+img:hover {
+    transform: scale(1.1);
+    transition: 2s;
+}
+#page {
+    width: 100%;
+    height: auto;
+    background: white;
+    margin: auto;
+}
+
+.judul-font{
+    font-size:230%;
+}
+
+.lengket {
+    position: sticky;
+    top: 0;
+    border-bottom: 0.1rem solid yellow;
+    z-index: 1;
+}
+
+.judul {
+    width: 100%;
+    height: 12rem;
+    background: url(../../img/judul.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+
+
+.logo {
+    position: absolute;
+    width: 11%;
+    top: 2.5rem;
+    left: 2.5rem;
+}
+
+.ukuran-logo-nav {
+    width: 3%;
+}
+
+.footer {
+    width: 100%;
+    position: fixed;
+    background-color: #343a40;
+    bottom: 0;
+    height: 2rem;
+    text-align: center;
+}
+
+.footer2 {
+    width: 100%;
+    height: 2.2rem;
+}
+
+.hitam {
+    color: black !important;
+}
+.putih {
+    color: white !important;
+}
+
+.merah {
+    color: red;
+    margin: 1rem;
+}
+
+.abu-abu {
+    color: grey;
+}
+
+.isi {
+    position: static;
+    width: 100%;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.form-contact {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.textarea {
+    height: 14rem;
+}
+
+.isi-kiri {
+    position: static;
+    float: left;
+    color: white;
+    margin-top : 2rem;
+}
+
+.kanan {
+    float: right;
+}
+
+.kiri {
+    float: left;
+}
+
+.back-login{
+    background: url(../../img/background.jpg);
+    background-size: cover;
+
+}
+
+.login {
+    width: 20rem;
+    background-color: white;
+    border-style: outset;
+    margin-right: 35%;
+    margin-left: 35%;
+    margin-top: 30%;
+    margin-bottom: 25%;
+}
+
+.ml {
+    margin-left:1rem;
+}
+
+.bgd {
+    width: 100%;
+    background-color: black;
+}
+
+.kiri-table {
+    width: 30%;
+}
+
+.kanan-table {
+    width: 70%;
+}
+
+.bgputih {
+    background-color: white;
+    color: black;
+}
+.kuning{
+    color:yellow;
+}
+.bghitam {
+    background-color: #D6D6D6;
+    color: black;
+}
+
+.intiutamany {
+    background-color: #343a40;
+}
+
+
+.body {
+    background-image: linear-gradient(to right, white, #D6D6D6);
+}
