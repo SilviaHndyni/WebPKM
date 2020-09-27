@@ -79,10 +79,15 @@ $results = $stmt->fetchAll();
                     </div>
                 </div>
             </div>
+            
         </div>
-        <div style="width:100%">
-        <?php echo $result[0]['link'];?>
-        </div>
+        <?php 
+          $link = $result[0]['link'];?>
+        <script>
+        document.write()
+        </script>
+        
+
     </div>
   <?php } ?>
 
