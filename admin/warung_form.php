@@ -1,21 +1,31 @@
 
-    <div class="container-fluid">
+    <div class="container-fluid mt-3">
         <div class="row">
             <div class="col-md-12">
                 <div class="card strpied-tabled-with-hover">
-                    <h1 style="margin-left:2rem;">Tambah Data</h1>
-                    <form action="warung_tambah.php" enctype="multipart/form-data" style="margin-left:4rem;" name="frmAdd" id="frmAdd" method="POST">
-                        <label>nama: </label><br/>
-                        <input type="text" name="nama" required /><br/><br/>
-                        <label>alamat: </label><br/>
-                        <textarea name="alamat" required></textarea><br/><br/>
-                        <label>link: </label><br/>
-                        <textarea name="link" required></textarea><br/><br/>
-                        <label>deskripsi: </label><br/>
-                        <textarea name="deskripsi" required></textarea><br/><br/>
-                        <label>gambar: </label><br/>
-                        <input type="file" name="gambar" id="gambar" require /><br/><br/>
-                        <input name="add_record" type="submit" value="Tambah">
+                    <h3 class="text-center">Tambah Data</h3>
+                    <form action="warung_tambah.php" enctype="multipart/form-data" style="margin-left:4rem;" class="mx-4" name="frmAdd" id="frmAdd" method="POST">
+                        <div class="form-group">
+                            <label>nama :</label>
+                            <input type="text" class="form-control" name="nama" required>
+                        </div>
+                        <div class="form-group">
+                            <label>alamat :</label>
+                            <textarea class="form-control" name="alamat" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>link gmaps :</label>
+                            <textarea class="form-control" name="link" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>deskripsi :</label>
+                            <textarea class="form-control" name="deskripsi" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>gambar: </label><br/>
+                            <input type="file" name="gambar" id="gambar" required />
+                        </div>
+                        <input name="add_record" type="submit" class="btn mb-4 mt-2" value="Tambah">
                     </form>
                 </div>
             </div>

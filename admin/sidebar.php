@@ -2,7 +2,7 @@
             <div class="sidebar-wrapper">
                 <div style="margin-left:4rem;margin-top:2rem;">
                     <a href="#" class="simple-text putih">
-                        WISATA
+                        BANJARMASIN
                     </a>
                 </div>
                 <?php
@@ -18,19 +18,19 @@
                     <li <?php if($admin=="destinasi"){echo "class='nav-item active'";}?>>
                         <a class="nav-link active" href="index.php?admin=destinasi">
                         <i class="fa fa-edit" style="font-size:28px"></i>
-                            <p>Destinasi</p>
-                        </a>
-                    </li>
-                    <li <?php if($admin=="hotel"){echo "class='nav-item active'";}?>>
-                        <a class="nav-link" href="index.php?admin=hotel">
-                        <i class="fa fa-edit" style="font-size:28px"></i>
-                            <p>Hotel</p>
+                            <p>Wisata</p>
                         </a>
                     </li>
                     <li <?php if($admin=="warung"){echo "class='nav-item active'";}?>>
                         <a class="nav-link" href="index.php?admin=warung">
                         <i class="fa fa-edit" style="font-size:28px"></i>
-                            <p>Warung</p>
+                            <p>Tempat Makan</p>
+                        </a>
+                    </li>
+                    <li <?php if($admin=="hotel"){echo "class='nav-item active'";}?>>
+                        <a class="nav-link" href="index.php?admin=hotel">
+                        <i class="fa fa-edit" style="font-size:28px"></i>
+                            <p>Penginapan</p>
                         </a>
                     </li>
                 </ul>

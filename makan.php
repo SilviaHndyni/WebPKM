@@ -37,7 +37,7 @@ $result = $stmt->fetchAll();
         <a class="nav-link" href="wisata.php">Wisata</a>
       </li>
       <li class="nav-item"> 
-        <a class="nav-link active" href="makan.php">Kuliner<span class="sr-only">(current)</span></a>
+        <a class="nav-link active" href="makan.php">Tempat Makan<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item"> 
         <a class="nav-link" href="penginapan.php">Penginapan</a>
@@ -57,7 +57,7 @@ $result = $stmt->fetchAll();
         <hr>
       </div>
       <div class="col-lg-4">
-        <p class="text-center font-weight-bold font-italic judul">KULINER</p>
+        <p class="text-center font-weight-bold font-italic judul">TEMPAT MAKAN</p>
       </div>
       <div class="col-lg-4">
         <hr>

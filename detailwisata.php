@@ -42,7 +42,7 @@ $results = $stmt->fetchAll();
         <a class="nav-link active" href="wisata.php">Wisata<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item"> 
-        <a class="nav-link" href="makan.php">Kuliner</a>
+        <a class="nav-link" href="makan.php">Tempat Makan</a>
       </li>
       <li class="nav-item"> 
         <a class="nav-link" href="penginapan.php">Penginapan</a>

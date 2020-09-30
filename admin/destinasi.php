@@ -5,7 +5,7 @@ $stmt = $pdo_conn->prepare("SELECT * FROM destinasi ORDER BY nama DESC");
 $stmt->execute();
 $result = $stmt->fetchAll();
 $kalimat='ini kalimat';
-$huruf_maksimal=30;
+$huruf_maksimal=28;
 
 ?>
 <div class="content">
@@ -14,7 +14,7 @@ $huruf_maksimal=30;
                         <div class="col-md-12">
                             <div class="card strpied-tabled-with-hover">
                                 <div class="card-header ">
-                                    <h4 class="card-title">Data Destinasi</h4>
+                                    <h4 class="card-title">Data Wisata</h4>
                                     <a href="index.php?admin=destinasi_form">
                                         <button type="button" style="float:right;"class="btn btn-success">Tambah</button>
                                     </a>
