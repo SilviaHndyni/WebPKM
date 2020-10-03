@@ -73,7 +73,6 @@ $results = $stmt->fetchAll();
                         <p class="card-text"><small>Alamat : <?php echo $result[0]['alamat'];?></small></p>
                     </div>
                 </div>
-<<<<<<< HEAD
               </div>
         </div>
     </div>
